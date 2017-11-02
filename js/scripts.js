@@ -74,16 +74,20 @@
 // console.log(name);
 // console.log(stringObj.split('o').join('ough'));
 
+//
+// let bestNumeber = 42;
+//
+// console.log(typeof bestNumber);
+//
+// let reallyBestNumber = new Number(42);
+//
+// console.log(reallyBestNumber);
+//
+//
+// let bool = new Boolean(true);
+//
+// console.log(bool);
 
-let bestNumeber = 42;
 
-console.log(typeof bestNumber);
-
-let reallyBestNumber = new Number(42);
-
-console.log(reallyBestNumber);
-
-
-let bool = new Boolean(true);
-
-console.log(bool);
+var confirm = confirm("Are you sure?");
+console.log(confirm);
