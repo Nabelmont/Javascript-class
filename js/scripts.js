@@ -84,19 +84,35 @@
 //
 // isMember ? price == 2 : price == 6
 
-var askAge = prompt("Type in your age.");
-askAge = new Date(askAge);
-if (askAge > 18){
-  prompt("Are you less than 80 years old?");
-} else {
-  alert("You are not old enough!!");
-  break;
-} if (askAge > 18 && askAge < 80) {
-var starWar = prompt("Do you like Star Wars?");
-} if (askAge > 80) {
-  prompt("Do you like Prunes?");
-} if (starWar = !yes) {
-  break;
-} else {
-  YOU ROCK!!!
-}
+// var askAge = prompt("Type in your age.");
+// askAge = new Date(askAge);
+// if (askAge > 18){
+//   prompt("Are you less than 80 years old?");
+// } else {
+//   alert("You are not old enough!!");
+//   break;
+// } if (askAge > 18 && askAge < 80) {
+// var starWar = prompt("Do you like Star Wars?");
+// } if (askAge > 80) {
+//   prompt("Do you like Prunes?");
+// } if (starWar = !yes) {
+//   break;
+// } else {
+//   YOU ROCK!!!
+// }
+
+
+//Takehome
+
+var userName = prompt('what is your name?', 'Joe');
+var favColor = prompt('what is your favorite color?', 'acceptable: blue, green, ...');
+favColor = favColor.toLowerCase();
+switch(favColor) {
+  case 'blue':
+    alert('Blue is do Gewd.');
+    break;
+  case 'green':
+    alert('Greeeeeeeen .');
+    break;
+    default:
+      alert('No, Try AGAIN!!!!!!!!!');
