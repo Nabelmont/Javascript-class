@@ -1,22 +1,54 @@
- var div = document.querySelector('.text');
-// // div.textContent = 'hello world!';
-// div.innerHTML = '<h1 class="text-center">Whoa, JS IS SO KEWL!!</h1>';
-var myNewPTag = document.createElement('p');
-// var myDiv = document.createElement('div');
-// myDiv.textContent = 'Star Wars is gonna suck..........;()';
-myNewPTag.textContent = 'stuff';
-// div.appendChild(myNewPTag);
-var ul = document.querySelector('ul');
-var lis = document.querySelectorAll('li');
-ul.insertBefore(myNewPTag, lis[2]);
-// var userInput = ' adslf dfd  sfw fj 033';
-// userInput = userInput.split(' ').trim().join(' ');
-myNewPTag.className = 'text-center text-danger';
+// var sayHello = function() {
+//   alert('Hey there, customer!');
+// };
+//
+// var interval = setInterval(sayHello,  2000)
+//
+//
+// // clearTimeout(timer);
+var loginBtn = document.getElementById("logIn");
 
-myNewPTag.addEventListener('click', function(e) {
 
+loginBtn.addEventListener('click', function(e) {
+  e.preventDefault();//Mockup for submitting data and getting results
+  var username = document.forms[0].username.value;
+  localStorage.setItem("username", username);
 });
-var myImg = document.createElement('img');
-myImg.setAttribute('src', 'https://go');
+//
+// var clearUser = document.getElementById("clearUser");
+//
+// clearUser.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   var username = document.forms[0].username.value;
+//   localStorage.removeItem("username", username);
+// });
+//
+// var update = document.getElementById("updateBtn");
+//
+// update.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   var username = document.forms[0].username.value;
+//   localStorage.removeItem("username", username);
+//   var newUser = "Tim";
+//   localStorage.setItem("username", newUser);
+// });
+var update = document.querySelector('#updateBtn');
+var clear = document.querySelector('#clearBtn');
+var alert = document.querySelector('#alertBtn');
 
-div.appendChild(myImg);
+
+var btns = document.querySelectorAll('button');
+var attachListeners = function(element, evt) {
+  element.addEventListener(evt, function(e) {
+    switch(element) {
+      case update:
+        var itemToStore = provideStorageItem(document.forms.loginForm.username.value);
+        localStorage.setItem('username', itemToStore);
+        break;
+    }
+  });
+}
+
+var provideStorageItem = function (input) {
+  return input.value;
+};
